@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Infrastructure\Auth;
+namespace App\Core\Infraestructure\Auth;
 
 use App\Core\Domain\Auth\SessionRepositoryInterface;
 

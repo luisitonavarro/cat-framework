@@ -8,6 +8,11 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Commands\\SampleCommand' => $baseDir . '/app/Console/Commands/SampleCommand.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
+    'App\\Core\\Application\\Auth\\SessionService' => $baseDir . '/src/Core/Application/Auth/SessionService.php',
+    'App\\Core\\Domain\\Auth\\SessionRepositoryInterface' => $baseDir . '/src/Core/Domain/Auth/SessionRepositoryInterface.php',
+    'App\\Core\\Infraestructure\\Auth\\SessionRepository' => $baseDir . '/src/Core/Infraestructure/Auth/SessionRepository.php',
+    'App\\Core\\Infraestructure\\ExceptionHandler' => $baseDir . '/src/Core/Infraestructure/ExceptionHandler.php',
+    'App\\Core\\Interfaces\\Controllers\\Auth\\AuthController' => $baseDir . '/src/Core/Interfaces/Controllers/Auth/AuthController.php',
     'App\\Core\\Interfaces\\Controllers\\HomeController' => $baseDir . '/src/Core/Interfaces/Controllers/HomeController.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',

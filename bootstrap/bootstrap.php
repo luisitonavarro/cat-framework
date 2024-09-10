@@ -5,6 +5,7 @@ require __DIR__ . '/../app/Helpers/Helpers.php';
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 use Jenssegers\Blade\Blade;
+use App\Core\Infrastructure\ExceptionHandler;
 
 // Inicializa el contenedor y el dispatcher (Singleton)
 $container = new Container;
@@ -49,6 +50,15 @@ foreach ($dependencies as $key => $dependency) {
 
 // Cargar rutas de la aplicación
 require __DIR__ . '/../routes/web.php';
+
+// Manejador de excepciones
+$exceptionHandler = new App\Core\Infraestructure\ExceptionHandler();
+
+set_exception_handler(function ($exception) use ($exceptionHandler) {
+    $response = $exceptionHandler->handle($exception);
+    $response->send();
+    exit; // Asegúrate de detener la ejecución después de enviar la respuesta
+});
 
 // Devolver el contenedor, el router y Blade
 return compact('router', 'blade', 'container');

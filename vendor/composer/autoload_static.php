@@ -144,6 +144,7 @@ class ComposerStaticInitae8d2ab3dad8df0a2592176584a9ee96
         'A' => 
         array (
             'App\\Core\\Interfaces\\Controllers\\' => 32,
+            'App\\Core\\' => 9,
             'App\\' => 4,
         ),
     );
@@ -431,6 +432,10 @@ class ComposerStaticInitae8d2ab3dad8df0a2592176584a9ee96
         array (
             0 => __DIR__ . '/../..' . '/src/Core/Interfaces/Controllers',
         ),
+        'App\\Core\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Core',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -440,6 +445,11 @@ class ComposerStaticInitae8d2ab3dad8df0a2592176584a9ee96
     public static $classMap = array (
         'App\\Console\\Commands\\SampleCommand' => __DIR__ . '/../..' . '/app/Console/Commands/SampleCommand.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Core\\Application\\Auth\\SessionService' => __DIR__ . '/../..' . '/src/Core/Application/Auth/SessionService.php',
+        'App\\Core\\Domain\\Auth\\SessionRepositoryInterface' => __DIR__ . '/../..' . '/src/Core/Domain/Auth/SessionRepositoryInterface.php',
+        'App\\Core\\Infraestructure\\Auth\\SessionRepository' => __DIR__ . '/../..' . '/src/Core/Infraestructure/Auth/SessionRepository.php',
+        'App\\Core\\Infraestructure\\ExceptionHandler' => __DIR__ . '/../..' . '/src/Core/Infraestructure/ExceptionHandler.php',
+        'App\\Core\\Interfaces\\Controllers\\Auth\\AuthController' => __DIR__ . '/../..' . '/src/Core/Interfaces/Controllers/Auth/AuthController.php',
         'App\\Core\\Interfaces\\Controllers\\HomeController' => __DIR__ . '/../..' . '/src/Core/Interfaces/Controllers/HomeController.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',

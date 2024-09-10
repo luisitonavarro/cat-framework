@@ -76,5 +76,6 @@ return array(
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'App\\Core\\Interfaces\\Controllers\\' => array($baseDir . '/src/Core/Interfaces/Controllers'),
+    'App\\Core\\' => array($baseDir . '/src/Core'),
     'App\\' => array($baseDir . '/app'),
 );
