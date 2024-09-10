@@ -1,6 +1,6 @@
 {
   "name": "cat-framework/cat-framework",
-  "description": "Cat Framework basado en Clean Architecture con componentes de Laravel.",
+  "description": "Cat framework ᗢ basado en Clean Architecture con componentes de Laravel.",
   "type": "project",
   "require": {
     "php": ">=7.4",
@@ -30,5 +30,13 @@
     "platform": {
       "php": "7.4.0"
     }
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "composer dump-autoload"
+    ],
+    "post-install-cmd": [
+      "composer dump-autoload"
+    ]
   }
 }
