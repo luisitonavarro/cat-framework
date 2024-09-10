@@ -9,7 +9,14 @@ use Illuminate\Http\Request;
 $router = $dependencies['router'];
 $blade = $dependencies['blade'];
 
-// Procesar solicitud
-$request = Request::capture();
-$response = $router->dispatch($request);
-$response->send();
+// Verificar si se está ejecutando en la línea de comandos (CLI) o en un entorno HTTP
+if (php_sapi_name() === 'cli') {
+    // Manejo de comandos de consola
+    $consoleKernel = new \App\Console\Kernel();
+    $consoleKernel->handle();
+} else {
+    // Manejo de solicitudes HTTP
+    $request = Request::capture();
+    $response = $router->dispatch($request);
+    $response->send();
+}
