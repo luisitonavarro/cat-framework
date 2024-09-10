@@ -2,9 +2,12 @@
 /public/hot
 /public/storage
 /store/*.key
+/store/cache/*
 /vendor
+/vendor/*
 .env
 .env.backup
 .phpunit.result.cache
 /.idea
 /.vscode
+git
