@@ -32,12 +32,7 @@ class ExceptionHandler
      */
     protected function renderNotFound(): Response
     {
-        $view = __DIR__ . '/../../resources/views/errors/404.blade.php';
-        if (file_exists($view)) {
-            return new Response($this->renderView($view), 404);
-        }
-
-        return new Response('404 - Página no encontrada', 404);
+        return new Response($this->renderView('errors/404'), 404);
     }
 
     /**
@@ -48,16 +43,12 @@ class ExceptionHandler
      */
     protected function renderInternalError(Exception $exception): Response
     {
-        if (getenv('APP_ENV') === 'development') {
+        // Muestra detalles del error solo en modo de desarrollo
+        if (env('APP_ENV') === 'development') {
             return new Response("Error Interno: {$exception->getMessage()}", 500);
         }
 
-        $view = __DIR__ . '/../../resources/views/errors/500.blade.php';
-        if (file_exists($view)) {
-            return new Response($this->renderView($view), 500);
-        }
-
-        return new Response('500 - Error Interno del Servidor', 500);
+        return new Response($this->renderView('errors/500'), 500);
     }
 
     /**
@@ -68,8 +59,19 @@ class ExceptionHandler
      */
     protected function renderView(string $view): string
     {
-        // Usa Blade o cualquier otro motor de plantillas para renderizar la vista
         $blade = app('blade');
-        return $blade->render(basename($view, '.blade.php'), []);
+
+        try {
+            // Verifica la ruta del archivo de vista
+            $viewPath = __DIR__ . "/../../../resources/views/{$view}.blade.php";
+            if (!file_exists($viewPath)) {
+                return "Vista no encontrada: {$viewPath}";
+            }
+
+            // Renderiza la vista usando Blade
+            return $blade->render($view, []);
+        } catch (\Exception $e) {
+            return 'Error al renderizar la vista: ' . $e->getMessage();
+        }
     }
 }

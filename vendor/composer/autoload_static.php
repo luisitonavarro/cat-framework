@@ -446,6 +446,7 @@ class ComposerStaticInitae8d2ab3dad8df0a2592176584a9ee96
         'App\\Console\\Commands\\SampleCommand' => __DIR__ . '/../..' . '/app/Console/Commands/SampleCommand.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Core\\Application\\Auth\\SessionService' => __DIR__ . '/../..' . '/src/Core/Application/Auth/SessionService.php',
+        'App\\Core\\Application\\LocaleManager' => __DIR__ . '/../..' . '/src/Core/Application/LocaleManager.php',
         'App\\Core\\Domain\\Auth\\SessionRepositoryInterface' => __DIR__ . '/../..' . '/src/Core/Domain/Auth/SessionRepositoryInterface.php',
         'App\\Core\\Infraestructure\\Auth\\SessionRepository' => __DIR__ . '/../..' . '/src/Core/Infraestructure/Auth/SessionRepository.php',
         'App\\Core\\Infraestructure\\ExceptionHandler' => __DIR__ . '/../..' . '/src/Core/Infraestructure/ExceptionHandler.php',

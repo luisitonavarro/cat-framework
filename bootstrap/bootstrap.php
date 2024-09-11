@@ -6,6 +6,11 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
 use Jenssegers\Blade\Blade;
 use App\Core\Infrastructure\ExceptionHandler;
+use Dotenv\Dotenv;
+
+// Carga el archivo .env
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
 // Inicializa el contenedor y el dispatcher (Singleton)
 $container = new Container;
@@ -18,6 +23,7 @@ $cachePath = __DIR__ . '/../store/cache';
 // Inicializa Blade
 $blade = new Blade($viewsPath, $cachePath);
 
+// Registrar Blade en el contenedor
 // Registrar Blade en el contenedor
 $container->singleton('blade', function () use ($blade) {
     return $blade;

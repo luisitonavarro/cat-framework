@@ -3,7 +3,7 @@
         'name' => 'cat-framework/cat-framework',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '62a252f2cfd365117ad856bf9c1fd848d36f3f3b',
+        'reference' => '4d8dad8fd58fd84e2107fdff9952da00bd5e04f2',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -31,7 +31,7 @@
         'cat-framework/cat-framework' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '62a252f2cfd365117ad856bf9c1fd848d36f3f3b',
+            'reference' => '4d8dad8fd58fd84e2107fdff9952da00bd5e04f2',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

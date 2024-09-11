@@ -11,6 +11,6 @@ class HomeController
     {
         $blade = app()->make('blade'); // Accede a Blade usando el contenedor
         $title = 'Hello from HomeController!';
-        return $blade->render('home', ['title' => $title]);
+        return $blade->render('welcome', ['title' => $title]);
     }
 }
