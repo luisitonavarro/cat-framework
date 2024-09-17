@@ -3,6 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 $dependencies = require __DIR__ . '/../bootstrap/bootstrap.php';
 
+// Inicializar la aplicación
 use App\Console\Kernel;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
